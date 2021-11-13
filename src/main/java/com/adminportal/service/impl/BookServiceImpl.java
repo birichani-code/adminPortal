@@ -23,11 +23,8 @@ public class BookServiceImpl implements BookService{
 	public List<Book> findAll() {
 		return (List<Book>) bookRepository.findAll();
 	}
-
-	@Override
+	
 	public Optional<Book> findById(Long id) {
 		return bookRepository.findById(id);
 	}
-
-
 }

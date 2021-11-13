@@ -61,7 +61,7 @@
 					<div class="col-md-8">
 						<input type="date" class="form-control" id="publicationDate"
 							   name="publicationDate" th:value="${book.publicationDate}"
-							   placeholder="ublication Date"/> <span class="help-block">Publication
+							   placeholder="publication Date"/> <span class="help-block">Publication
 								Date of the book</span>
 					</div>
 				</div>
@@ -216,7 +216,7 @@
 					<div class="col-md-8">
 							<textarea name="description" rows="5" class="form-control"
 									  id="description" th:value="${book.description}" th:text="${book.description}"
-									  placeholder="Description"/>
+									  placeholder="Description"></textarea>
 						<span class="help-block">Description of the book</span>
 					</div>
 				</div>
@@ -245,6 +245,6 @@
 </div>
 
 
-<div th:replace="common/header :: body-bottom-scripts"/>
+<div th:replace="common/header :: body-bottom-scripts"></div>
 </body>
 </html>
