@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -58,7 +57,7 @@ public class BookController {
 	
 	@RequestMapping("/bookInfo")
 	public String bookInfo(@RequestParam("id") Long id, Model model) {
-		Optional<Book> book = bookService.findById(id);
+		Book book = bookService.findById(id);
 		model.addAttribute("book", book);
 		
 		return "bookInfo";
@@ -66,7 +65,7 @@ public class BookController {
 	
 	@RequestMapping("/updateBook")
 	public String updateBook(@RequestParam("id") Long id, Model model) {
-		Optional<Book> book = bookService.findById(id);
+		Book book = bookService.findById(id);
 		model.addAttribute("book", book);
 		
 		return "updateBook";

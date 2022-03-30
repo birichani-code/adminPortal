@@ -1,7 +1,6 @@
 package com.adminportal.service.impl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +23,7 @@ public class BookServiceImpl implements BookService{
 		return (List<Book>) bookRepository.findAll();
 	}
 	
-	public Optional<Book> findById(Long id) {
-		return bookRepository.findById(id);
+	public Book findById(Long id) {
+		return bookRepository.findById(id).orElseThrow(NullPointerException::new);
 	}
 }

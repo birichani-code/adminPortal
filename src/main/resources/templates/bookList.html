@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<html lang="en" xmlns:th xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:schemaLocation="http://www.w3.org/1000/xhtml ">
 <head th:replace="common/header :: common-header"></head>
 
@@ -37,7 +37,8 @@
 	</div>
 
 </div>
-<script>
+<div th:replace="common/header :: body-bottom-scripts">
+	<script>
 		$(document).ready(function() {
 			$("#bookListTable").DataTable({
 				"lengthMenu": [[5,10,15,20,-1],[5,10,15,20,"All"]],
@@ -46,7 +47,8 @@
 			});
 		});
 
-</script>
-<div th:replace="common/header :: body-bottom-scripts"></div>
+	</script>
+</div>
+
 </body>
 </html>
